@@ -1,13 +1,14 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
-const Nav = () => {
+function Nav() {
   return (
     <>
-      <Link to="\knapsack">Knapsack</Link>
+      hey
+      {/* <p><Link to="\knapsack">Knapsack</Link></p> */}
     </>
   );
-};
+}
 
 export default function App() {
   return (
@@ -15,7 +16,7 @@ export default function App() {
       <Nav />
       <Router>
         <Switch>
-          <Route path="/knapsack" exact element="<Nav />" />
+          <Route path="/knapsack" exact component="<Knapsack>" />
         </Switch>
       </Router>
     </>
