@@ -1,6 +1,7 @@
 import React from 'react'
-import ReactDom from 'react-dom'
 import {Link} from 'react-router-dom'
-default export function knapsack(){
-  
+export default function Knapsack(){
+  // return(
+  //   <p>hey im knapsack</P>
+  // );
 }
