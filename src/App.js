@@ -1,14 +1,16 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Routes, Route, Link } from 'react-router-dom';
-// import Knapsack from './components/Knapsack';
-import Knapsack from './pages/Knapsack';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Knapsack from './components/Knapsack';
+// import Knapsack from './pages/Knapsack';
 
 function Nav() {
   return (
     <>
       hey
       <p>
-        <a href="/knapsack">Knapsack</a>
+        <a href="/knapsack">Knapsack </a><br/>
+        <a href="/floyds">Floyds </a><br/>
+        <a href="/warshalls">warshalls </a>
       </p>
     </>
   );
@@ -20,7 +22,10 @@ export default function App() {
       <Nav />
       <Router>
         <Routes>
-           <Route path="/knapsack" exact element={Knapsack} />
+           <Route path="/knapsack" exact element={<Knapsack/>} />
+           <Route path="/" exact element={<Nav/>} />
+           <Route path="/warshalls" exact element={<Knapsack/>} />
+           
         </Routes>
       </Router>
     </>
