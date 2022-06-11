@@ -14,7 +14,7 @@ import Warshalls from './components/Warshalls';
 function Nav() {
   return (
     <>
-      <select onSe>
+      <select onchange="">
         <option><Link to="/knapsack">Knapsack </Link>
         </option>
         <option><Link to="/floyds">Floyds </Link></option>
