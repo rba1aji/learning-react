@@ -22,9 +22,9 @@ export default function App() {
       <Nav />
       <Router>
         <Routes>
-           <Route path="/knapsack" exact element={<Knapsack/>} />
            <Route path="/" exact element={<Nav/>} />
-           <Route path="/warshalls" exact element={<Knapsack/>} />
+           <Route path="/knapsack" exact element={<Knapsack/>} />
+           <Route path="/warshalls" exact element={<Nav/>} />
            
         </Routes>
       </Router>
