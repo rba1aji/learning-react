@@ -21,14 +21,15 @@ function Nav() {
 export default function App() {
   return (
     <>
-      <Nav />
+      {/* <Nav /> */}
       <Router>
         <Routes>
-           <Route path="/" exact element={<Nav/>} />
-           <Route path="/knapsack" exact element={<Knapsack/>} />
-           <Route path="/floyds" exact element={<Floyds/>} />
-           <Route path="/warshalls" exact element={<Warshalls/>} />
-           
+           <Route path="/" element={<Nav/>} >
+             <Route index element={<Nav/>}/>
+           <Route path="knapsack" element={<Knapsack/>} />
+           <Route path="floyds" element={<Floyds/>} />
+           <Route path="warshalls" element={<Warshalls/>} />
+           </Route>
         </Routes>
       </Router>
     </>
