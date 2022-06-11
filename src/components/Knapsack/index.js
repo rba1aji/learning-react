@@ -2,6 +2,6 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 export default function Knapsack(){
    return(
-    <p>hey im knapsack</p>
+    <Link to="/">hey im knapsack</Link>
    );
 }

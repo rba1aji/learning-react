@@ -1,12 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import Knapsack from './components/Knapsack'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Knapsack from './components/Knapsack';
+// import Knapsack from './components/Knapsack'
 
 function Nav() {
   return (
     <>
       hey
-      {/* <p><Link to="\knapsack">Knapsack</Link></p> */}
+      <p><Link to="/knapsack">Knapsack</Link></p>
     </>
   );
 }
@@ -16,9 +17,9 @@ export default function App() {
     <>
       <Nav />
       <Router>
-        <Switch>
-          <Route path="/knapsack" exact component={Knapsack} />
-        </Switch>
+        <Routes>
+           <Route path="/" element={<Knapsack/>} />
+        </Routes>
       </Router>
     </>
   );
