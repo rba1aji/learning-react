@@ -14,14 +14,12 @@ import Warshalls from './components/Warshalls';
 function Nav() {
   return (
     <>
-      {/* hey */}
-      <p>
-        <Link to="/knapsack">Knapsack </Link>
-        <br />
-        <Link to="/floyds">Floyds </Link>
-        <br />
-        <Link to="/warshalls">warshalls </Link>
-      </p>
+      <select onSe>
+        <option><Link to="/knapsack">Knapsack </Link>
+        </option>
+        <option><Link to="/floyds">Floyds </Link></option>
+        <option><Link to="/warshalls">warshalls </Link></option>
+      </select>
       <Outlet />
     </>
   );
