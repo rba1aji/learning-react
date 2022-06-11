@@ -5,20 +5,26 @@ import {
   Route,
   Outlet,
   Link,
+  useNavigate,
 } from 'react-router-dom';
 import Knapsack from './components/Knapsack';
 import Floyds from './components/Floyds';
 import Warshalls from './components/Warshalls';
 // import Knapsack from './pages/Knapsack';
 
-function Nav() {
+const Layout=()=> {
+  const navigate = useNavigate();
+  const handleChange = (event) => {
+    const val=event.target.value;
+    navigate(val)
+  };
   return (
     <>
-      <select onchange="">
-        <option><Link to="/knapsack">Knapsack </Link>
-        </option>
-        <option><Link to="/floyds">Floyds </Link></option>
-        <option><Link to="/warshalls">warshalls </Link></option>
+      <select onChange={handleChange}>
+        <option value="/index">select</option>
+        <option value="/knapsack">Knapsack </option>
+        <option value="/floyds">Floyds </option>
+        <option value="/warshalls">warshalls </option>
       </select>
       <Outlet />
     </>
@@ -28,11 +34,10 @@ function Nav() {
 export default function App() {
   return (
     <>
-      {/* <Nav /> */}
       <Router>
         <Routes>
-          <Route path="/" element={<Nav />}>
-            <Route index element={<Nav />} />
+          <Route path="/" element={<Layout />}>
+            <Route path="index" element={<Layout />} />
             <Route path="knapsack" element={<Knapsack />} />
             <Route path="floyds" element={<Floyds />} />
             <Route path="warshalls" element={<Warshalls />} />
