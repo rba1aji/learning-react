@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import Knapsack from './components/Knapsack'
 import Floyds from './components/Floyds'
+import Warshalls from './components/Warshalls'
 // import Knapsack from './pages/Knapsack';
 
 function Nav() {
@@ -26,7 +27,7 @@ export default function App() {
            <Route path="/" exact element={<Nav/>} />
            <Route path="/knapsack" exact element={<Knapsack/>} />
            <Route path="/floyds" exact element={<Floyds/>} />
-           <Route path="/warshalls" exact element={<Nav/>} />
+           <Route path="/warshalls" exact element={<Warshalls/>} />
            
         </Routes>
       </Router>
