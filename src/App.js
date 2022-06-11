@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Outlet, Link } from 'react-router-dom'
 import Knapsack from './components/Knapsack'
 import Floyds from './components/Floyds'
 import Warshalls from './components/Warshalls'
@@ -8,12 +8,13 @@ import Warshalls from './components/Warshalls'
 function Nav() {
   return (
     <>
-      hey
+      {/* hey */}
       <p>
         <a href="/knapsack">Knapsack </a><br/>
         <a href="/floyds">Floyds </a><br/>
         <a href="/warshalls">warshalls </a>
       </p>
+      <Outlet />
     </>
   );
 }
