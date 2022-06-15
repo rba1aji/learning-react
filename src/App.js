@@ -4,7 +4,6 @@ import {
   Routes,
   Route,
   Outlet,
-  Link,
   useNavigate,
 } from 'react-router-dom';
 import Knapsack from './components/Knapsack';
