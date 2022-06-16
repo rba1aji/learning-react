@@ -1,35 +1,48 @@
-import React from 'react';
+import React from "react";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   Outlet,
-  Link,
-  useNavigate,
-} from 'react-router-dom';
-import Knapsack from './components/Knapsack';
-import Floyds from './components/Floyds';
-import Warshalls from './components/Warshalls';
+  useNavigate
+} from "react-router-dom";
+import Knapsack from "./components/Knapsack";
+import Floyds from "./components/Floyds";
+import Warshalls from "./components/Warshalls";
 // import Knapsack from './pages/Knapsack';
+import Box from "@mui/material/Box";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
 
-const Layout=()=> {
+const Layout = () => {
   const navigate = useNavigate();
   const handleChange = (event) => {
-    const val=event.target.value;
-    navigate(val)
+    const val = event.target.value;
+    navigate(val);
   };
   return (
     <>
-      <select onChange={handleChange}>
-        <option value="/index">select</option>
-        <option value="/knapsack">Knapsack </option>
-        <option value="/floyds">Floyds </option>
-        <option value="/warshalls">warshalls </option>
-      </select>
+      <Box>
+        <FormControl fullWidth>
+          <InputLabel id="demo-simple-select-label">Select</InputLabel>
+          <Select
+            // label="Select"
+            id="demo-simple-select"
+            onChange={handleChange}
+          >
+            {/* <option value="/index">select</option> */}
+            <option value="/knapsack">Knapsack </option>
+            <option value="/floyds">Floyds </option>
+            <option value="/warshalls">warshalls </option>
+          </Select>
+        </FormControl>
+      </Box>
       <Outlet />
     </>
   );
-}
+};
 
 export default function App() {
   return (
