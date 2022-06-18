@@ -26,16 +26,16 @@ const Layout = () => {
     <>
       <Box>
         <FormControl fullWidth>
-          <InputLabel id="demo-simple-select-label">Select</InputLabel>
+          <InputLabel id="demo-simple-select-label">Select algorithm</InputLabel>
           <Select
-            // label="Select"
+            label="Select algorithm"
             id="demo-simple-select"
             onChange={handleChange}
           >
-            {/* <option value="/index">select</option> */}
-            <option value="/knapsack">Knapsack </option>
-            <option value="/floyds">Floyds </option>
-            <option value="/warshalls">warshalls </option>
+            {/* <MenuItem value="/index">select</MenuItem> */}
+            <MenuItem value="/knapsack">Knapsack </MenuItem>
+            <MenuItem value="/floyds">Floyds </MenuItem>
+            <MenuItem value="/warshalls">warshalls </MenuItem>
           </Select>
         </FormControl>
       </Box>
