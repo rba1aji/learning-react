@@ -25,7 +25,7 @@ const Layout = () => {
   return (
     <>
       <Box>
-        <FormControl fullWidth>
+        <FormControl style={{width:250}}>
           <InputLabel id="demo-simple-select-label">
             Select algorithm
           </InputLabel>
