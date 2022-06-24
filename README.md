@@ -1,4 +1,7 @@
-react app  made from pc vscode 
+react app  made from pc vscode
+I use this repository for practicing the concepts of react.js
+
+ 
 <!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
